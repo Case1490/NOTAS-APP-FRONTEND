@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
-const NoteForm = ({ onSubmit, initialDate }) => {
-  const [note, setNotes] = useState(initialDate);
+const NoteForm = ({ onSubmit, initialData }) => {
+  const [note, setNotes] = useState(initialData);
 
   //Necesitamos actualizar los cambios si los datos iniciales cambian
   useEffect(() => {
-    setNotes[initialDate];
-  }, [initialDate]);
+    setNotes[initialData];
+  }, [initialData]);
 
   const handleChange = (e) => {
     setNotes({
