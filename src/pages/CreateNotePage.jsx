@@ -31,7 +31,7 @@ const CreateNotePage = () => {
     <div>
       <NoteForm
         onSubmit={handleCreate}
-        initialDate={{ title: "", content: "" }}
+        initialData={{ title: "", content: "" }}
       />
     </div>
   );
