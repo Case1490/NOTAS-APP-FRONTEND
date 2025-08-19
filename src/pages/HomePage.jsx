@@ -12,7 +12,6 @@ const HomePage = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`${apiURL}/api/notes`);
-        console.log(response);
         setNotes(response.data);
         setLoading(false);
       } catch (error) {
@@ -22,6 +21,10 @@ const HomePage = () => {
 
     fetchData();
   }, []);
+
+  const handleDelete = (id) => {
+    setNotes((prevNotes) => prevNotes.filter((note) => note._id !== id));
+  };
 
   if (loading) return <span>Cargando...</span>;
 
@@ -34,6 +37,7 @@ const HomePage = () => {
           description={note.description}
           id={note._id}
           date={formatData(note.createdAt)}
+          onDelete={handleDelete}
         />
       ))}
     </div>

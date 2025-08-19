@@ -23,6 +23,8 @@ const EditNotePage = () => {
     });
   }, [id]);
 
+  console.log(initialData);
+
   const handleUpdate = async (note) => {
     await axios.put(`${apiURL}/api/notes/${id}`, note).then((res) => {
       if (res.status === 200) {

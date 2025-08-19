@@ -5,7 +5,7 @@ const NoteForm = ({ onSubmit, initialData }) => {
 
   //Necesitamos actualizar los cambios si los datos iniciales cambian
   useEffect(() => {
-    setNotes[initialData];
+    setNotes(initialData);
   }, [initialData]);
 
   const handleChange = (e) => {
