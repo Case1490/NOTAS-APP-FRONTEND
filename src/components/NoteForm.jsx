@@ -31,7 +31,7 @@ const NoteForm = ({ onSubmit, initialData }) => {
         type="text"
         id="title"
         name="title"
-        value={note.title}
+        value={note?.title}
         onChange={handleChange}
         required
       />
@@ -39,7 +39,7 @@ const NoteForm = ({ onSubmit, initialData }) => {
         className="input lg:input-lg resize-y w-full mb-8 textarea focus:outline-0 border-0"
         name="description"
         id="description"
-        value={note.description}
+        value={note?.description}
         onChange={handleChange}
         placeholder="Descripción de la tarea"
         required
